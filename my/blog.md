@@ -7,6 +7,13 @@
 CTRL+i *在斜体和不斜体之前切换*（与word一样）
 CTRL+B **在加粗和不加粗之间切换**（与word一样）
 ### 这是三级标题
+## 修改字体颜色
+字体本身颜色
+<font color=Blue>ADB</font>
+字体背景颜色
+<font style=background:red>ADB</font>
+两者结合
+<font color=Blue><font style=background:red>ADB</font>
 ## 列表
 1. 有序
 3. 乱编依然有序
