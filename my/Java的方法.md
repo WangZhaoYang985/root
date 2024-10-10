@@ -133,3 +133,29 @@ public class Main{
 ​	•	它被声明为 static，因为你可以直接使用它来计算，而不需要创建新的对象。
 
 ​	•	ave 方法是一个“工具方法”，它可以在不同地方被调用，帮助大家计算平均值。
+
+6.练习
+
+编写以下两个方法，并在main方法中测试这两个方法。
+（1）方法1：在屏幕上输出：“方法练习”
+（2）方法2：计算长方形的面积，长和宽为整形，面积为双精度浮点型
+
+```java
+public class Main {
+    public static void method1() {
+        System.out.println("方法练习");
+    }
+    public static double method2(int length, int width) {
+        double area = (double) length * width; 
+        return area;
+    }
+    public static void main(String[] args) {
+        method1();
+        int length = 5;
+        int width = 10;
+        double area = method2(length, width);
+        System.out.println("长方形的面积为: " + area);
+    }
+}
+```
+
