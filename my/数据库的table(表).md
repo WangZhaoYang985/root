@@ -13,6 +13,17 @@ create table cjb(学号 char(10) primary key,数学 decimal(5,1)asse foreign key
 ```sql
 create view 计科201 as select * from student where 班级='计科20-1';-- 创建一个视图，名为计科201，这个视图包含了student表中所有班级为计科20-1的学生记录
 ```
+```sql
+create table st22(学号 char(10) primary key check(学号 between '2020100000' and '2050100000'),姓名 char(12) not null,性别 char(2) check(性别 in('男','女')),班级 char(20));
+-- 1.check(学号 between '2020100000' and '2050100000')：对学号字段添加一个检查约束，确保学号的值在2020100000到2050100000之间
+-- 2.姓名 char(12) not null：定义一个名为姓名的字段，数据类型为字符型，长度为12，并且这个字段不能为null，即每条记录都必须有姓名
+-- 3.check(性别 in('男','女'))：对性别字段添加一个检查约束，确保性别的值只能是男或女
+```
+
+```sql
+create table cj22(学号 char(10) primary key,数学 integer check(数学>=0 and 数学<=100),语文 integer check(语文>=0 and 语文<=150),foreign key 学号 references st22(学号));
+-- 数学 integer check(数学>=0 and 数学<=100)：定义一个名为数学的字段，数据类型为整型。同时，对这个字段添加一个检查约束，确保数学成绩的值在0到100之间
+```
 
 **解释说明**
 
